@@ -2,6 +2,16 @@ import java.util.Scanner;
 
 public class CalculatePi {
 
+    Scanner s = new Scanner(System.in);
+    double res = 0;
+
+    public CalculatePi(){
+        System.out.println("Enter the input number");
+        int n = s.nextInt();
+        res = calculate(n);
+        System.out.println(res);
+    }
+
     public double calculate(int n){
         double Pi = 0.0;
         for (double i = 1; i < n; i++) {
@@ -15,12 +25,12 @@ public class CalculatePi {
     }
 
     public static void main(String[] args){
-        System.out.println("Enter the input number");
+
         CalculatePi calculatePi = new CalculatePi();
-        Scanner scanner = new Scanner(System.in);
 
-        int n = scanner.nextInt();
-
-        System.out.println(calculatePi.calculate(n));
+        //System.out.println("Enter the input number");
+        //Scanner scanner = new Scanner(System.in);
+        //int n = scanner.nextInt();
+        //System.out.println(calculatePi.calculate(n));
     }
 }
